@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navbar {
+  font-family: "Play", sans-serif;
+  position: relative;
+  background-image: url(./assets/cloud.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 150px;
+}
+
+.container-fluid {
+  background-color: #1a1a1a;
+  font-family: "Roboto", sans-serif;
+}
+
+.brand {
+  position: absolute;
+  top: 98px;
+  left: 50px;
+}
+
+@media (max-width: 430px) {
+  .brand {
+    top: 120px !important;
+    left: 50px;
+  }
+}
+
+.footer_brand {
+  font-family: "Play", sans-serif;
+}
+
+.link_icons img {
+  width: 50px;
+}
