@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import SearchIcon from "../../assets/search.png";
 import CoOrdinates from "../functions/CoOrdinates";
 import Wind from "../functions/Wind";
@@ -13,6 +13,12 @@ const BoxOne = ({
   HandleKeyDown,
   cityNotFound,
 }) => {
+  const inputref = useRef(null);
+
+  useEffect(() => {
+    inputref.current.focus();
+  }, []);
+
   return (
     <>
       <div>
@@ -31,6 +37,7 @@ const BoxOne = ({
               <input
                 type="search"
                 value={text}
+                ref={inputref}
                 onChange={HandleCity}
                 onKeyDown={HandleKeyDown}
                 className="form-control fs-4  text-light"
